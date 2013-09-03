@@ -1,0 +1,588 @@
+[2013-09-03 22:16]:[root]:[INFO]:[/usr/local/lib/python2.7/dist-packages/tornado-2.0-py2.7.egg/tornado/web.py]:[line-number:1313]:[200 GET / (127.0.0.1) 32.63ms]
+[2013-09-03 22:18]:[root]:[ERROR]:[/usr/local/lib/python2.7/dist-packages/tornado-2.0-py2.7.egg/tornado/template.py]:[line-number:150]:[index.html code:
+ 1  def _execute():
+ 2      _buffer = []
+ 3      _buffer.append('<!DOCTYPE html>\n<html>\n<head>\n<title>\xe6\xac\xa2\xe8\xbf\x8e\xe5\x85\x89\xe4\xb8\xb4\xe5\xb0\x8f\xe7\x8e\x8b\xe7\x9a\x84\xe7\xa9\xba\xe9\x97\xb4</title>\n</head>\n<body>\n')
+ 4      for person in personList:
+ 5          _buffer.append('\n')
+ 6          _tmp = person[0],person[1],person[2],person[3]
+ 7          if isinstance(_tmp, _string_types): _tmp = _utf8(_tmp)
+ 8          else: _tmp = _utf8(str(_tmp))
+ 9          _tmp = _utf8(xhtml_escape(_tmp))
+10          _buffer.append(_tmp)
+11          _buffer.append('\n')
+12      _buffer.append('\n</body>\n</html>')
+13      return _utf8('').join(_buffer)]
+[2013-09-03 22:18]:[root]:[ERROR]:[/usr/local/lib/python2.7/dist-packages/tornado-2.0-py2.7.egg/tornado/web.py]:[line-number:967]:[Uncaught exception GET / (127.0.0.1)
+HTTPRequest(protocol='http', host='localhost:9090', method='GET', uri='/', version='HTTP/1.1', remote_ip='127.0.0.1', body='', headers={'Accept-Language': 'zh-CN,zh;q=0.8', 'Accept-Encoding': 'gzip,deflate,sdch', 'Host': 'localhost:9090', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8', 'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/28.0.1500.71 Chrome/28.0.1500.71 Safari/537.36', 'Dnt': '1', 'Connection': 'keep-alive', 'Cookie': 'uuid=8821B58CB7C3194800FAB050A6EE136ECA49CD352CC0F4EB002031A051A9C0C3EBB80D8F1DACBADE', 'Cache-Control': 'max-age=0', 'If-None-Match': '"d5b329f7597685fb69652553cb353e4784d7d11d"'})]
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/tornado-2.0-py2.7.egg/tornado/web.py", line 927, in _execute
+    getattr(self, self.request.method.lower())(*args, **kwargs)
+  File "/home/xiaowang/PycharmProjects/psSite/controller.py", line 15, in get
+    self.write(loader.load("index.html").generate(personList = personList))
+  File "/usr/local/lib/python2.7/dist-packages/tornado-2.0-py2.7.egg/tornado/template.py", line 147, in generate
+    return execute()
+  File "<template index.html>", line 6, in _execute
+IndexError: tuple index out of range
+[2013-09-03 22:18]:[root]:[ERROR]:[/usr/local/lib/python2.7/dist-packages/tornado-2.0-py2.7.egg/tornado/web.py]:[line-number:1313]:[500 GET / (127.0.0.1) 185.12ms]
+[2013-09-03 22:19]:[root]:[ERROR]:[/usr/local/lib/python2.7/dist-packages/tornado-2.0-py2.7.egg/tornado/template.py]:[line-number:150]:[index.html code:
+ 1  def _execute():
+ 2      _buffer = []
+ 3      _buffer.append('<!DOCTYPE html>\n<html>\n<head>\n<title>\xe6\xac\xa2\xe8\xbf\x8e\xe5\x85\x89\xe4\xb8\xb4\xe5\xb0\x8f\xe7\x8e\x8b\xe7\x9a\x84\xe7\xa9\xba\xe9\x97\xb4</title>\n</head>\n<body>\n')
+ 4      for person in personList:
+ 5          _buffer.append('\n')
+ 6          _tmp = person[0],person[1],person[2],person[3]
+ 7          if isinstance(_tmp, _string_types): _tmp = _utf8(_tmp)
+ 8          else: _tmp = _utf8(str(_tmp))
+ 9          _tmp = _utf8(xhtml_escape(_tmp))
+10          _buffer.append(_tmp)
+11          _buffer.append('\n')
+12      _buffer.append('\n</body>\n</html>')
+13      return _utf8('').join(_buffer)]
+[2013-09-03 22:19]:[root]:[ERROR]:[/usr/local/lib/python2.7/dist-packages/tornado-2.0-py2.7.egg/tornado/web.py]:[line-number:967]:[Uncaught exception GET / (127.0.0.1)
+HTTPRequest(protocol='http', host='localhost:9090', method='GET', uri='/', version='HTTP/1.1', remote_ip='127.0.0.1', body='', headers={'Accept-Language': 'zh-CN,zh;q=0.8', 'Accept-Encoding': 'gzip,deflate,sdch', 'Host': 'localhost:9090', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8', 'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/28.0.1500.71 Chrome/28.0.1500.71 Safari/537.36', 'Dnt': '1', 'Connection': 'keep-alive', 'Cookie': 'uuid=8821B58CB7C3194800FAB050A6EE136ECA49CD352CC0F4EB002031A051A9C0C3EBB80D8F1DACBADE', 'Cache-Control': 'max-age=0'})]
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/tornado-2.0-py2.7.egg/tornado/web.py", line 927, in _execute
+    getattr(self, self.request.method.lower())(*args, **kwargs)
+  File "/home/xiaowang/PycharmProjects/psSite/controller.py", line 15, in get
+    self.write(loader.load("index.html").generate(personList = personList))
+  File "/usr/local/lib/python2.7/dist-packages/tornado-2.0-py2.7.egg/tornado/template.py", line 147, in generate
+    return execute()
+  File "<template index.html>", line 6, in _execute
+IndexError: tuple index out of range
+[2013-09-03 22:19]:[root]:[ERROR]:[/usr/local/lib/python2.7/dist-packages/tornado-2.0-py2.7.egg/tornado/web.py]:[line-number:1313]:[500 GET / (127.0.0.1) 1.98ms]
+[2013-09-03 22:19]:[root]:[ERROR]:[/usr/local/lib/python2.7/dist-packages/tornado-2.0-py2.7.egg/tornado/template.py]:[line-number:150]:[index.html code:
+ 1  def _execute():
+ 2      _buffer = []
+ 3      _buffer.append('<!DOCTYPE html>\n<html>\n<head>\n<title>\xe6\xac\xa2\xe8\xbf\x8e\xe5\x85\x89\xe4\xb8\xb4\xe5\xb0\x8f\xe7\x8e\x8b\xe7\x9a\x84\xe7\xa9\xba\xe9\x97\xb4</title>\n</head>\n<body>\n')
+ 4      for person in personList:
+ 5          _buffer.append('\n')
+ 6          _tmp = person[0],person[1],person[2],person[3]
+ 7          if isinstance(_tmp, _string_types): _tmp = _utf8(_tmp)
+ 8          else: _tmp = _utf8(str(_tmp))
+ 9          _tmp = _utf8(xhtml_escape(_tmp))
+10          _buffer.append(_tmp)
+11          _buffer.append('\n')
+12      _buffer.append('\n</body>\n</html>')
+13      return _utf8('').join(_buffer)]
+[2013-09-03 22:19]:[root]:[ERROR]:[/usr/local/lib/python2.7/dist-packages/tornado-2.0-py2.7.egg/tornado/web.py]:[line-number:967]:[Uncaught exception GET / (127.0.0.1)
+HTTPRequest(protocol='http', host='localhost:9090', method='GET', uri='/', version='HTTP/1.1', remote_ip='127.0.0.1', body='', headers={'Accept-Language': 'zh-CN,zh;q=0.8', 'Accept-Encoding': 'gzip,deflate,sdch', 'Host': 'localhost:9090', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8', 'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/28.0.1500.71 Chrome/28.0.1500.71 Safari/537.36', 'Dnt': '1', 'Connection': 'keep-alive', 'Cookie': 'uuid=8821B58CB7C3194800FAB050A6EE136ECA49CD352CC0F4EB002031A051A9C0C3EBB80D8F1DACBADE', 'Cache-Control': 'max-age=0'})]
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/tornado-2.0-py2.7.egg/tornado/web.py", line 927, in _execute
+    getattr(self, self.request.method.lower())(*args, **kwargs)
+  File "/home/xiaowang/PycharmProjects/psSite/controller.py", line 15, in get
+    self.write(loader.load("index.html").generate(personList = personList))
+  File "/usr/local/lib/python2.7/dist-packages/tornado-2.0-py2.7.egg/tornado/template.py", line 147, in generate
+    return execute()
+  File "<template index.html>", line 6, in _execute
+IndexError: tuple index out of range
+[2013-09-03 22:19]:[root]:[ERROR]:[/usr/local/lib/python2.7/dist-packages/tornado-2.0-py2.7.egg/tornado/web.py]:[line-number:1313]:[500 GET / (127.0.0.1) 12.92ms]
+[2013-09-03 22:20]:[root]:[ERROR]:[/usr/local/lib/python2.7/dist-packages/tornado-2.0-py2.7.egg/tornado/template.py]:[line-number:150]:[index.html code:
+ 1  def _execute():
+ 2      _buffer = []
+ 3      _buffer.append('<!DOCTYPE html>\n<html>\n<head>\n<title>\xe6\xac\xa2\xe8\xbf\x8e\xe5\x85\x89\xe4\xb8\xb4\xe5\xb0\x8f\xe7\x8e\x8b\xe7\x9a\x84\xe7\xa9\xba\xe9\x97\xb4</title>\n</head>\n<body>\n')
+ 4      for person in personList:
+ 5          _buffer.append('\n')
+ 6          _tmp = person[0],person[1],person[2],person[3]
+ 7          if isinstance(_tmp, _string_types): _tmp = _utf8(_tmp)
+ 8          else: _tmp = _utf8(str(_tmp))
+ 9          _tmp = _utf8(xhtml_escape(_tmp))
+10          _buffer.append(_tmp)
+11          _buffer.append('\n')
+12      _buffer.append('\n</body>\n</html>')
+13      return _utf8('').join(_buffer)]
+[2013-09-03 22:20]:[root]:[ERROR]:[/usr/local/lib/python2.7/dist-packages/tornado-2.0-py2.7.egg/tornado/web.py]:[line-number:967]:[Uncaught exception GET / (127.0.0.1)
+HTTPRequest(protocol='http', host='localhost:9090', method='GET', uri='/', version='HTTP/1.1', remote_ip='127.0.0.1', body='', headers={'Accept-Language': 'zh-CN,zh;q=0.8', 'Accept-Encoding': 'gzip,deflate,sdch', 'Host': 'localhost:9090', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8', 'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/28.0.1500.71 Chrome/28.0.1500.71 Safari/537.36', 'Dnt': '1', 'Connection': 'keep-alive', 'Cookie': 'uuid=8821B58CB7C3194800FAB050A6EE136ECA49CD352CC0F4EB002031A051A9C0C3EBB80D8F1DACBADE', 'Cache-Control': 'max-age=0'})]
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/tornado-2.0-py2.7.egg/tornado/web.py", line 927, in _execute
+    getattr(self, self.request.method.lower())(*args, **kwargs)
+  File "/home/xiaowang/PycharmProjects/psSite/controller.py", line 15, in get
+    self.write(loader.load("index.html").generate(personList = personList))
+  File "/usr/local/lib/python2.7/dist-packages/tornado-2.0-py2.7.egg/tornado/template.py", line 147, in generate
+    return execute()
+  File "<template index.html>", line 4, in _execute
+TypeError: 'NoneType' object is not iterable
+[2013-09-03 22:20]:[root]:[ERROR]:[/usr/local/lib/python2.7/dist-packages/tornado-2.0-py2.7.egg/tornado/web.py]:[line-number:1313]:[500 GET / (127.0.0.1) 44.62ms]
+[2013-09-03 22:21]:[root]:[ERROR]:[/usr/local/lib/python2.7/dist-packages/tornado-2.0-py2.7.egg/tornado/template.py]:[line-number:150]:[index.html code:
+ 1  def _execute():
+ 2      _buffer = []
+ 3      _buffer.append('<!DOCTYPE html>\n<html>\n<head>\n<title>\xe6\xac\xa2\xe8\xbf\x8e\xe5\x85\x89\xe4\xb8\xb4\xe5\xb0\x8f\xe7\x8e\x8b\xe7\x9a\x84\xe7\xa9\xba\xe9\x97\xb4</title>\n</head>\n<body>\n')
+ 4      for person in personList:
+ 5          _buffer.append('\n')
+ 6          _tmp = person[0],person[1],person[2],person[3]
+ 7          if isinstance(_tmp, _string_types): _tmp = _utf8(_tmp)
+ 8          else: _tmp = _utf8(str(_tmp))
+ 9          _tmp = _utf8(xhtml_escape(_tmp))
+10          _buffer.append(_tmp)
+11          _buffer.append('\n')
+12      _buffer.append('\n</body>\n</html>')
+13      return _utf8('').join(_buffer)]
+[2013-09-03 22:21]:[root]:[ERROR]:[/usr/local/lib/python2.7/dist-packages/tornado-2.0-py2.7.egg/tornado/web.py]:[line-number:967]:[Uncaught exception GET / (127.0.0.1)
+HTTPRequest(protocol='http', host='localhost:9090', method='GET', uri='/', version='HTTP/1.1', remote_ip='127.0.0.1', body='', headers={'Accept-Language': 'zh-CN,zh;q=0.8', 'Accept-Encoding': 'gzip,deflate,sdch', 'Host': 'localhost:9090', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8', 'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/28.0.1500.71 Chrome/28.0.1500.71 Safari/537.36', 'Dnt': '1', 'Connection': 'keep-alive', 'Cookie': 'uuid=8821B58CB7C3194800FAB050A6EE136ECA49CD352CC0F4EB002031A051A9C0C3EBB80D8F1DACBADE', 'Cache-Control': 'max-age=0'})]
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/tornado-2.0-py2.7.egg/tornado/web.py", line 927, in _execute
+    getattr(self, self.request.method.lower())(*args, **kwargs)
+  File "/home/xiaowang/PycharmProjects/psSite/controller.py", line 15, in get
+    self.write(loader.load("index.html").generate(personList = personList))
+  File "/usr/local/lib/python2.7/dist-packages/tornado-2.0-py2.7.egg/tornado/template.py", line 147, in generate
+    return execute()
+  File "<template index.html>", line 6, in _execute
+AttributeError: SitePerson instance has no attribute '__getitem__'
+[2013-09-03 22:21]:[root]:[ERROR]:[/usr/local/lib/python2.7/dist-packages/tornado-2.0-py2.7.egg/tornado/web.py]:[line-number:1313]:[500 GET / (127.0.0.1) 34228.46ms]
+[2013-09-03 22:22]:[root]:[ERROR]:[/usr/local/lib/python2.7/dist-packages/tornado-2.0-py2.7.egg/tornado/template.py]:[line-number:150]:[index.html code:
+ 1  def _execute():
+ 2      _buffer = []
+ 3      _buffer.append('<!DOCTYPE html>\n<html>\n<head>\n<title>\xe6\xac\xa2\xe8\xbf\x8e\xe5\x85\x89\xe4\xb8\xb4\xe5\xb0\x8f\xe7\x8e\x8b\xe7\x9a\x84\xe7\xa9\xba\xe9\x97\xb4</title>\n</head>\n<body>\n')
+ 4      for person in personList:
+ 5          _buffer.append('\n')
+ 6          _tmp = person[0],person[1],person[2],person[3]
+ 7          if isinstance(_tmp, _string_types): _tmp = _utf8(_tmp)
+ 8          else: _tmp = _utf8(str(_tmp))
+ 9          _tmp = _utf8(xhtml_escape(_tmp))
+10          _buffer.append(_tmp)
+11          _buffer.append('\n')
+12      _buffer.append('\n</body>\n</html>')
+13      return _utf8('').join(_buffer)]
+[2013-09-03 22:22]:[root]:[INFO]:[/usr/local/lib/python2.7/dist-packages/tornado-2.0-py2.7.egg/tornado/web.py]:[line-number:1313]:[200 GET / (127.0.0.1) 11326.80ms]
+[2013-09-03 22:23]:[root]:[ERROR]:[/usr/local/lib/python2.7/dist-packages/tornado-2.0-py2.7.egg/tornado/template.py]:[line-number:150]:[index.html code:
+ 1  def _execute():
+ 2      _buffer = []
+ 3      _buffer.append('<!DOCTYPE html>\n<html>\n<head>\n<title>\xe6\xac\xa2\xe8\xbf\x8e\xe5\x85\x89\xe4\xb8\xb4\xe5\xb0\x8f\xe7\x8e\x8b\xe7\x9a\x84\xe7\xa9\xba\xe9\x97\xb4</title>\n</head>\n<body>\n')
+ 4      for person in personList:
+ 5          _buffer.append('\n')
+ 6          _tmp = person["id"],person["personName"],person["personPhoto"],person["personComment"]
+ 7          if isinstance(_tmp, _string_types): _tmp = _utf8(_tmp)
+ 8          else: _tmp = _utf8(str(_tmp))
+ 9          _tmp = _utf8(xhtml_escape(_tmp))
+10          _buffer.append(_tmp)
+11          _buffer.append('\n')
+12      _buffer.append('\n</body>\n</html>')
+13      return _utf8('').join(_buffer)]
+[2013-09-03 22:23]:[root]:[INFO]:[/usr/local/lib/python2.7/dist-packages/tornado-2.0-py2.7.egg/tornado/web.py]:[line-number:1313]:[304 GET / (127.0.0.1) 15.24ms]
+[2013-09-03 22:26]:[root]:[INFO]:[/usr/local/lib/python2.7/dist-packages/tornado-2.0-py2.7.egg/tornado/web.py]:[line-number:1313]:[200 GET / (127.0.0.1) 15.81ms]
+[2013-09-03 22:27]:[root]:[INFO]:[/usr/local/lib/python2.7/dist-packages/tornado-2.0-py2.7.egg/tornado/web.py]:[line-number:1313]:[200 GET / (127.0.0.1) 1.47ms]
+[2013-09-03 22:27]:[root]:[INFO]:[/usr/local/lib/python2.7/dist-packages/tornado-2.0-py2.7.egg/tornado/web.py]:[line-number:1313]:[200 GET / (127.0.0.1) 3.47ms]
+[2013-09-03 22:27]:[root]:[INFO]:[/usr/local/lib/python2.7/dist-packages/tornado-2.0-py2.7.egg/tornado/web.py]:[line-number:1313]:[304 GET / (127.0.0.1) 2.85ms]
+[2013-09-03 22:27]:[root]:[INFO]:[/usr/local/lib/python2.7/dist-packages/tornado-2.0-py2.7.egg/tornado/web.py]:[line-number:1313]:[200 GET / (127.0.0.1) 3.05ms]
+[2013-09-03 22:27]:[root]:[INFO]:[/usr/local/lib/python2.7/dist-packages/tornado-2.0-py2.7.egg/tornado/web.py]:[line-number:1313]:[304 GET / (127.0.0.1) 2.67ms]
+[2013-09-03 22:27]:[root]:[INFO]:[/usr/local/lib/python2.7/dist-packages/tornado-2.0-py2.7.egg/tornado/web.py]:[line-number:1313]:[200 GET / (127.0.0.1) 1.01ms]
+[2013-09-03 22:27]:[root]:[INFO]:[/usr/local/lib/python2.7/dist-packages/tornado-2.0-py2.7.egg/tornado/web.py]:[line-number:1313]:[304 GET / (127.0.0.1) 0.98ms]
+[2013-09-03 22:27]:[root]:[INFO]:[/usr/local/lib/python2.7/dist-packages/tornado-2.0-py2.7.egg/tornado/web.py]:[line-number:1313]:[304 GET / (127.0.0.1) 2.45ms]
+[2013-09-03 22:27]:[root]:[INFO]:[/usr/local/lib/python2.7/dist-packages/tornado-2.0-py2.7.egg/tornado/web.py]:[line-number:1313]:[304 GET / (127.0.0.1) 1.85ms]
+[2013-09-03 22:28]:[root]:[INFO]:[/usr/local/lib/python2.7/dist-packages/tornado-2.0-py2.7.egg/tornado/web.py]:[line-number:1313]:[200 GET / (127.0.0.1) 33251.87ms]
+[2013-09-03 22:30]:[root]:[INFO]:[/usr/local/lib/python2.7/dist-packages/tornado-2.0-py2.7.egg/tornado/web.py]:[line-number:1313]:[200 GET / (127.0.0.1) 5752.55ms]
+[2013-09-03 22:33]:[root]:[INFO]:[/usr/local/lib/python2.7/dist-packages/tornado-2.0-py2.7.egg/tornado/web.py]:[line-number:1313]:[200 GET / (127.0.0.1) 5.84ms]
+[2013-09-03 22:33]:[root]:[INFO]:[/usr/local/lib/python2.7/dist-packages/tornado-2.0-py2.7.egg/tornado/web.py]:[line-number:1313]:[200 GET / (127.0.0.1) 8.42ms]
+[2013-09-03 22:34]:[root]:[INFO]:[/usr/local/lib/python2.7/dist-packages/tornado-2.0-py2.7.egg/tornado/web.py]:[line-number:1313]:[200 GET / (127.0.0.1) 12.34ms]
+[2013-09-03 22:35]:[root]:[INFO]:[/usr/local/lib/python2.7/dist-packages/tornado-2.0-py2.7.egg/tornado/web.py]:[line-number:1313]:[200 GET / (127.0.0.1) 8.29ms]
+[2013-09-03 22:35]:[root]:[INFO]:[/usr/local/lib/python2.7/dist-packages/tornado-2.0-py2.7.egg/tornado/web.py]:[line-number:1313]:[304 GET / (127.0.0.1) 8.33ms]
+[2013-09-03 22:35]:[root]:[INFO]:[/usr/local/lib/python2.7/dist-packages/tornado-2.0-py2.7.egg/tornado/web.py]:[line-number:1313]:[304 GET / (127.0.0.1) 4.24ms]
+[2013-09-03 22:35]:[root]:[INFO]:[/usr/local/lib/python2.7/dist-packages/tornado-2.0-py2.7.egg/tornado/web.py]:[line-number:1313]:[304 GET / (127.0.0.1) 4.73ms]
+[2013-09-03 22:35]:[root]:[INFO]:[/usr/local/lib/python2.7/dist-packages/tornado-2.0-py2.7.egg/tornado/web.py]:[line-number:1313]:[304 GET / (127.0.0.1) 4.46ms]
+[2013-09-03 22:35]:[root]:[INFO]:[/usr/local/lib/python2.7/dist-packages/tornado-2.0-py2.7.egg/tornado/web.py]:[line-number:1313]:[304 GET / (127.0.0.1) 4.53ms]
+[2013-09-03 22:35]:[root]:[INFO]:[/usr/local/lib/python2.7/dist-packages/tornado-2.0-py2.7.egg/tornado/web.py]:[line-number:1313]:[304 GET / (127.0.0.1) 3.90ms]
+[2013-09-03 22:35]:[root]:[INFO]:[/usr/local/lib/python2.7/dist-packages/tornado-2.0-py2.7.egg/tornado/web.py]:[line-number:1313]:[304 GET / (127.0.0.1) 3.91ms]
+[2013-09-03 22:36]:[root]:[INFO]:[/usr/local/lib/python2.7/dist-packages/tornado-2.0-py2.7.egg/tornado/web.py]:[line-number:1313]:[304 GET / (127.0.0.1) 5.36ms]
+[2013-09-03 22:36]:[root]:[INFO]:[/usr/local/lib/python2.7/dist-packages/tornado-2.0-py2.7.egg/tornado/web.py]:[line-number:1313]:[304 GET / (127.0.0.1) 4.68ms]
+[2013-09-03 22:36]:[root]:[INFO]:[/usr/local/lib/python2.7/dist-packages/tornado-2.0-py2.7.egg/tornado/web.py]:[line-number:1313]:[304 GET / (127.0.0.1) 3.55ms]
+[2013-09-03 22:36]:[root]:[INFO]:[/usr/local/lib/python2.7/dist-packages/tornado-2.0-py2.7.egg/tornado/web.py]:[line-number:1313]:[304 GET / (127.0.0.1) 4.00ms]
+[2013-09-03 22:36]:[root]:[INFO]:[/usr/local/lib/python2.7/dist-packages/tornado-2.0-py2.7.egg/tornado/web.py]:[line-number:1313]:[304 GET / (127.0.0.1) 10.81ms]
+[2013-09-03 22:37]:[root]:[ERROR]:[/usr/local/lib/python2.7/dist-packages/tornado-2.0-py2.7.egg/tornado/template.py]:[line-number:150]:[index.html code:
+ 1  def _execute():
+ 2      _buffer = []
+ 3      _buffer.append('<!DOCTYPE html>\n<html>\n<head>\n<meta charset="utf-8" />\n<title>\xe6\xac\xa2\xe8\xbf\x8e\xe5\x85\x89\xe4\xb8\xb4\xe5\xb0\x8f\xe7\x8e\x8b\xe7\x9a\x84\xe7\xa9\xba\xe9\x97\xb4</title>\n</head>\n<body>\n<ul>\n')
+ 4      for person in personList:
+ 5          _buffer.append('\n')
+ 6          _buffer.append('\n<li>')
+ 7          _tmp = person.id,utf8(person.personName),person.personPhoto,person.personComment
+ 8          if isinstance(_tmp, _string_types): _tmp = _utf8(_tmp)
+ 9          else: _tmp = _utf8(str(_tmp))
+10          _tmp = _utf8(xhtml_escape(_tmp))
+11          _buffer.append(_tmp)
+12          _buffer.append('\n')
+13          _buffer.append('\n')
+14      _buffer.append('\n</ul>\n</body>\n</html>')
+15      return _utf8('').join(_buffer)]
+[2013-09-03 22:37]:[root]:[INFO]:[/usr/local/lib/python2.7/dist-packages/tornado-2.0-py2.7.egg/tornado/web.py]:[line-number:1313]:[200 GET / (127.0.0.1) 4.40ms]
+[2013-09-03 22:37]:[root]:[ERROR]:[/usr/local/lib/python2.7/dist-packages/tornado-2.0-py2.7.egg/tornado/template.py]:[line-number:150]:[index.html code:
+ 1  def _execute():
+ 2      _buffer = []
+ 3      _buffer.append('<!DOCTYPE html>\n<html>\n<head>\n<meta charset="utf-8" />\n<title>\xe6\xac\xa2\xe8\xbf\x8e\xe5\x85\x89\xe4\xb8\xb4\xe5\xb0\x8f\xe7\x8e\x8b\xe7\x9a\x84\xe7\xa9\xba\xe9\x97\xb4</title>\n</head>\n<body>\n<ul>\n')
+ 4      for person in personList:
+ 5          _buffer.append('\n')
+ 6          _buffer.append('\n<li>')
+ 7          _tmp = person.id,utf8(person.personName),person.personPhoto,person.personComment
+ 8          if isinstance(_tmp, _string_types): _tmp = _utf8(_tmp)
+ 9          else: _tmp = _utf8(str(_tmp))
+10          _tmp = _utf8(xhtml_escape(_tmp))
+11          _buffer.append(_tmp)
+12          _buffer.append('\n')
+13          _buffer.append('\n')
+14      _buffer.append('\n</ul>\n</body>\n</html>')
+15      return _utf8('').join(_buffer)]
+[2013-09-03 22:37]:[root]:[INFO]:[/usr/local/lib/python2.7/dist-packages/tornado-2.0-py2.7.egg/tornado/web.py]:[line-number:1313]:[304 GET / (127.0.0.1) 5.42ms]
+[2013-09-03 22:38]:[root]:[INFO]:[/usr/local/lib/python2.7/dist-packages/tornado-2.0-py2.7.egg/tornado/web.py]:[line-number:1313]:[200 GET / (127.0.0.1) 8.76ms]
+[2013-09-03 22:40]:[root]:[INFO]:[/usr/local/lib/python2.7/dist-packages/tornado-2.0-py2.7.egg/tornado/web.py]:[line-number:1313]:[304 GET / (127.0.0.1) 7.34ms]
+[2013-09-03 22:40]:[root]:[INFO]:[/usr/local/lib/python2.7/dist-packages/tornado-2.0-py2.7.egg/tornado/web.py]:[line-number:1313]:[304 GET / (127.0.0.1) 7.11ms]
+[2013-09-03 22:40]:[root]:[INFO]:[/usr/local/lib/python2.7/dist-packages/tornado-2.0-py2.7.egg/tornado/web.py]:[line-number:1313]:[304 GET / (127.0.0.1) 4.75ms]
+[2013-09-03 22:40]:[root]:[ERROR]:[/usr/local/lib/python2.7/dist-packages/tornado-2.0-py2.7.egg/tornado/template.py]:[line-number:150]:[index.html code:
+ 1  def _execute():
+ 2      _buffer = []
+ 3      _buffer.append('<!DOCTYPE html>\n<html>\n<head>\n<meta charset="utf-8" />\n<title>\xe6\xac\xa2\xe8\xbf\x8e\xe5\x85\x89\xe4\xb8\xb4\xe5\xb0\x8f\xe7\x8e\x8b\xe7\x9a\x84\xe7\xa9\xba\xe9\x97\xb4</title>\n</head>\n<body>\n<ul>\n')
+ 4      for person in personList:
+ 5          _buffer.append('\n')
+ 6          _buffer.append('\n<li>')
+ 7          _tmp = person.id,person.personName,person.personPhoto,person.personComment
+ 8          if isinstance(_tmp, _string_types): _tmp = _utf8(_tmp)
+ 9          else: _tmp = _utf8(str(_tmp))
+10          _tmp = _utf8(xhtml_escape(_tmp))
+11          _buffer.append(_tmp)
+12          _buffer.append('\n')
+13          _buffer.append('\n')
+14      _buffer.append('\n</ul>\n</body>\n</html>')
+15      return _utf8('').join(_buffer)]
+[2013-09-03 22:40]:[root]:[INFO]:[/usr/local/lib/python2.7/dist-packages/tornado-2.0-py2.7.egg/tornado/web.py]:[line-number:1313]:[200 GET / (127.0.0.1) 26.04ms]
+[2013-09-03 22:40]:[root]:[ERROR]:[/usr/local/lib/python2.7/dist-packages/tornado-2.0-py2.7.egg/tornado/template.py]:[line-number:150]:[index.html code:
+ 1  def _execute():
+ 2      _buffer = []
+ 3      _buffer.append('<!DOCTYPE html>\n<html>\n<head>\n<meta charset="utf-8" />\n<title>\xe6\xac\xa2\xe8\xbf\x8e\xe5\x85\x89\xe4\xb8\xb4\xe5\xb0\x8f\xe7\x8e\x8b\xe7\x9a\x84\xe7\xa9\xba\xe9\x97\xb4</title>\n</head>\n<body>\n<ul>\n')
+ 4      for person in personList:
+ 5          _buffer.append('\n')
+ 6          _buffer.append('\n<li>')
+ 7          _tmp = person.id,person.personName,person.personPhoto,person.personComment
+ 8          if isinstance(_tmp, _string_types): _tmp = _utf8(_tmp)
+ 9          else: _tmp = _utf8(str(_tmp))
+10          _tmp = _utf8(xhtml_escape(_tmp))
+11          _buffer.append(_tmp)
+12          _buffer.append('\n')
+13          _buffer.append('\n')
+14      _buffer.append('\n</ul>\n</body>\n</html>')
+15      return _utf8('').join(_buffer)]
+[2013-09-03 22:40]:[root]:[INFO]:[/usr/local/lib/python2.7/dist-packages/tornado-2.0-py2.7.egg/tornado/web.py]:[line-number:1313]:[304 GET / (127.0.0.1) 1.59ms]
+[2013-09-03 22:41]:[root]:[ERROR]:[/usr/local/lib/python2.7/dist-packages/tornado-2.0-py2.7.egg/tornado/template.py]:[line-number:150]:[index.html code:
+ 1  def _execute():
+ 2      _buffer = []
+ 3      _buffer.append('<!DOCTYPE html>\n<html>\n<head>\n<meta charset="utf-8" />\n<title>\xe6\xac\xa2\xe8\xbf\x8e\xe5\x85\x89\xe4\xb8\xb4\xe5\xb0\x8f\xe7\x8e\x8b\xe7\x9a\x84\xe7\xa9\xba\xe9\x97\xb4</title>\n</head>\n<body>\n<ul>\n')
+ 4      for person in personList:
+ 5          _buffer.append('\n')
+ 6          _buffer.append('\n<li>')
+ 7          _tmp = person.id,person.personName,person.personPhoto,person.personComment
+ 8          if isinstance(_tmp, _string_types): _tmp = _utf8(_tmp)
+ 9          else: _tmp = _utf8(str(_tmp))
+10          _tmp = _utf8(xhtml_escape(_tmp))
+11          _buffer.append(_tmp)
+12          _buffer.append('\n')
+13          _buffer.append('\n')
+14      _buffer.append('\n</ul>\n</body>\n</html>')
+15      return _utf8('').join(_buffer)]
+[2013-09-03 22:41]:[root]:[INFO]:[/usr/local/lib/python2.7/dist-packages/tornado-2.0-py2.7.egg/tornado/web.py]:[line-number:1313]:[304 GET / (127.0.0.1) 3.98ms]
+[2013-09-03 22:41]:[root]:[ERROR]:[/usr/local/lib/python2.7/dist-packages/tornado-2.0-py2.7.egg/tornado/template.py]:[line-number:150]:[index.html code:
+ 1  def _execute():
+ 2      _buffer = []
+ 3      _buffer.append('<!DOCTYPE html>\n<html>\n<head>\n<meta charset="utf-8" />\n<title>\xe6\xac\xa2\xe8\xbf\x8e\xe5\x85\x89\xe4\xb8\xb4\xe5\xb0\x8f\xe7\x8e\x8b\xe7\x9a\x84\xe7\xa9\xba\xe9\x97\xb4</title>\n</head>\n<body>\n<ul>\n')
+ 4      for person in personList:
+ 5          _buffer.append('\n')
+ 6          _buffer.append('\n<li>')
+ 7          _tmp = person.id,person.personName,person.personPhoto,person.personComment
+ 8          if isinstance(_tmp, _string_types): _tmp = _utf8(_tmp)
+ 9          else: _tmp = _utf8(str(_tmp))
+10          _tmp = _utf8(xhtml_escape(_tmp))
+11          _buffer.append(_tmp)
+12          _buffer.append('\n')
+13          _buffer.append('\n')
+14      _buffer.append('\n</ul>\n</body>\n</html>')
+15      return _utf8('').join(_buffer)]
+[2013-09-03 22:41]:[root]:[INFO]:[/usr/local/lib/python2.7/dist-packages/tornado-2.0-py2.7.egg/tornado/web.py]:[line-number:1313]:[304 GET / (127.0.0.1) 22.85ms]
+[2013-09-03 22:43]:[root]:[ERROR]:[/usr/local/lib/python2.7/dist-packages/tornado-2.0-py2.7.egg/tornado/template.py]:[line-number:150]:[index.html code:
+ 1  def _execute():
+ 2      _buffer = []
+ 3      _buffer.append('<!DOCTYPE html>\n<html>\n<head>\n<meta charset="utf-8" />\n<title>\xe6\xac\xa2\xe8\xbf\x8e\xe5\x85\x89\xe4\xb8\xb4\xe5\xb0\x8f\xe7\x8e\x8b\xe7\x9a\x84\xe7\xa9\xba\xe9\x97\xb4</title>\n</head>\n<body>\n<ul>\n')
+ 4      for person in personList:
+ 5          _buffer.append('\n')
+ 6          _buffer.append('\n<li>')
+ 7          _tmp = person.id,person.personName,person.personPhoto,person.personComment
+ 8          if isinstance(_tmp, _string_types): _tmp = _utf8(_tmp)
+ 9          else: _tmp = _utf8(str(_tmp))
+10          _tmp = _utf8(xhtml_escape(_tmp))
+11          _buffer.append(_tmp)
+12          _buffer.append('\n')
+13          _buffer.append('\n')
+14      _buffer.append('\n</ul>\n</body>\n</html>')
+15      return _utf8('').join(_buffer)]
+[2013-09-03 22:43]:[root]:[INFO]:[/usr/local/lib/python2.7/dist-packages/tornado-2.0-py2.7.egg/tornado/web.py]:[line-number:1313]:[304 GET / (127.0.0.1) 1.63ms]
+[2013-09-03 22:43]:[root]:[ERROR]:[/usr/local/lib/python2.7/dist-packages/tornado-2.0-py2.7.egg/tornado/template.py]:[line-number:150]:[index.html code:
+ 1  def _execute():
+ 2      _buffer = []
+ 3      _buffer.append('<!DOCTYPE html>\n<html>\n<head>\n<meta charset="utf-8" />\n<title>\xe6\xac\xa2\xe8\xbf\x8e\xe5\x85\x89\xe4\xb8\xb4\xe5\xb0\x8f\xe7\x8e\x8b\xe7\x9a\x84\xe7\xa9\xba\xe9\x97\xb4</title>\n</head>\n<body>\n<ul>\n')
+ 4      for person in personList:
+ 5          _buffer.append('\n')
+ 6          _buffer.append('\n<li>')
+ 7          _tmp = person.id,person.personName,person.personPhoto,person.personComment
+ 8          if isinstance(_tmp, _string_types): _tmp = _utf8(_tmp)
+ 9          else: _tmp = _utf8(str(_tmp))
+10          _tmp = _utf8(xhtml_escape(_tmp))
+11          _buffer.append(_tmp)
+12          _buffer.append('\n')
+13          _buffer.append('\n')
+14      _buffer.append('\n</ul>\n</body>\n</html>')
+15      return _utf8('').join(_buffer)]
+[2013-09-03 22:43]:[root]:[INFO]:[/usr/local/lib/python2.7/dist-packages/tornado-2.0-py2.7.egg/tornado/web.py]:[line-number:1313]:[304 GET / (127.0.0.1) 32.95ms]
+[2013-09-03 22:45]:[root]:[ERROR]:[/usr/local/lib/python2.7/dist-packages/tornado-2.0-py2.7.egg/tornado/template.py]:[line-number:150]:[index.html code:
+ 1  def _execute():
+ 2      _buffer = []
+ 3      _buffer.append('<!DOCTYPE html>\n<html>\n<head>\n<meta charset="utf-8" />\n<title>\xe6\xac\xa2\xe8\xbf\x8e\xe5\x85\x89\xe4\xb8\xb4\xe5\xb0\x8f\xe7\x8e\x8b\xe7\x9a\x84\xe7\xa9\xba\xe9\x97\xb4</title>\n</head>\n<body>\n<ul>\n')
+ 4      for person in personList:
+ 5          _buffer.append('\n')
+ 6          _buffer.append('\n<li>')
+ 7          _tmp = person.id,person.personName,person.personPhoto,person.personComment
+ 8          if isinstance(_tmp, _string_types): _tmp = _utf8(_tmp)
+ 9          else: _tmp = _utf8(str(_tmp))
+10          _tmp = _utf8(xhtml_escape(_tmp))
+11          _buffer.append(_tmp)
+12          _buffer.append('\n')
+13          _buffer.append('\n')
+14      _buffer.append('\n</ul>\n</body>\n</html>')
+15      return _utf8('').join(_buffer)]
+[2013-09-03 22:45]:[root]:[INFO]:[/usr/local/lib/python2.7/dist-packages/tornado-2.0-py2.7.egg/tornado/web.py]:[line-number:1313]:[304 GET / (127.0.0.1) 22.98ms]
+[2013-09-03 22:45]:[root]:[ERROR]:[/usr/local/lib/python2.7/dist-packages/tornado-2.0-py2.7.egg/tornado/template.py]:[line-number:150]:[index.html code:
+ 1  def _execute():
+ 2      _buffer = []
+ 3      _buffer.append('<!DOCTYPE html>\n<html>\n<head>\n<meta charset="utf-8" />\n<title>\xe6\xac\xa2\xe8\xbf\x8e\xe5\x85\x89\xe4\xb8\xb4\xe5\xb0\x8f\xe7\x8e\x8b\xe7\x9a\x84\xe7\xa9\xba\xe9\x97\xb4</title>\n</head>\n<body>\n<ul>\n')
+ 4      for person in personList:
+ 5          _buffer.append('\n')
+ 6          _buffer.append('\n<li>')
+ 7          _tmp = person.id,person.personName,person.personPhoto,person.personComment
+ 8          if isinstance(_tmp, _string_types): _tmp = _utf8(_tmp)
+ 9          else: _tmp = _utf8(str(_tmp))
+10          _tmp = _utf8(xhtml_escape(_tmp))
+11          _buffer.append(_tmp)
+12          _buffer.append('\n')
+13          _buffer.append('\n')
+14      _buffer.append('\n</ul>\n</body>\n</html>')
+15      return _utf8('').join(_buffer)]
+[2013-09-03 22:45]:[root]:[INFO]:[/usr/local/lib/python2.7/dist-packages/tornado-2.0-py2.7.egg/tornado/web.py]:[line-number:1313]:[304 GET / (127.0.0.1) 3.44ms]
+[2013-09-03 22:46]:[root]:[ERROR]:[/usr/local/lib/python2.7/dist-packages/tornado-2.0-py2.7.egg/tornado/template.py]:[line-number:150]:[index.html code:
+ 1  def _execute():
+ 2      _buffer = []
+ 3      _buffer.append('<!DOCTYPE html>\n<html>\n<head>\n<meta charset="utf-8" />\n<title>\xe6\xac\xa2\xe8\xbf\x8e\xe5\x85\x89\xe4\xb8\xb4\xe5\xb0\x8f\xe7\x8e\x8b\xe7\x9a\x84\xe7\xa9\xba\xe9\x97\xb4</title>\n</head>\n<body>\n<ul>\n')
+ 4      for person in personList:
+ 5          _buffer.append('\n')
+ 6          _buffer.append('\n<li>')
+ 7          _tmp = person.id,person.personName,person.personPhoto,person.personComment
+ 8          if isinstance(_tmp, _string_types): _tmp = _utf8(_tmp)
+ 9          else: _tmp = _utf8(str(_tmp))
+10          _tmp = _utf8(xhtml_escape(_tmp))
+11          _buffer.append(_tmp)
+12          _buffer.append('\n')
+13          _buffer.append('\n')
+14      _buffer.append('\n</ul>\n</body>\n</html>')
+15      return _utf8('').join(_buffer)]
+[2013-09-03 22:46]:[root]:[INFO]:[/usr/local/lib/python2.7/dist-packages/tornado-2.0-py2.7.egg/tornado/web.py]:[line-number:1313]:[304 GET / (127.0.0.1) 12.22ms]
+[2013-09-03 22:51]:[root]:[ERROR]:[/usr/local/lib/python2.7/dist-packages/tornado-2.0-py2.7.egg/tornado/template.py]:[line-number:150]:[index.html code:
+ 1  def _execute():
+ 2      _buffer = []
+ 3      _buffer.append('<!DOCTYPE html>\n<html>\n<head>\n<meta charset="utf-8" />\n<title>\xe6\xac\xa2\xe8\xbf\x8e\xe5\x85\x89\xe4\xb8\xb4\xe5\xb0\x8f\xe7\x8e\x8b\xe7\x9a\x84\xe7\xa9\xba\xe9\x97\xb4</title>\n</head>\n<body>\n<ul>\n')
+ 4      for person in personList:
+ 5          _buffer.append('\n')
+ 6          _buffer.append('\n<li>')
+ 7          _tmp = person.id,person.personName,person.personPhoto,person.personComment
+ 8          if isinstance(_tmp, _string_types): _tmp = _utf8(_tmp)
+ 9          else: _tmp = _utf8(str(_tmp))
+10          _tmp = _utf8(xhtml_escape(_tmp))
+11          _buffer.append(_tmp)
+12          _buffer.append('\n')
+13          _buffer.append('\n')
+14      _buffer.append('\n</ul>\n</body>\n</html>')
+15      return _utf8('').join(_buffer)]
+[2013-09-03 22:51]:[root]:[INFO]:[/usr/local/lib/python2.7/dist-packages/tornado-2.0-py2.7.egg/tornado/web.py]:[line-number:1313]:[304 GET / (127.0.0.1) 4.77ms]
+[2013-09-03 22:51]:[root]:[ERROR]:[/usr/local/lib/python2.7/dist-packages/tornado-2.0-py2.7.egg/tornado/template.py]:[line-number:150]:[index.html code:
+ 1  def _execute():
+ 2      _buffer = []
+ 3      _buffer.append('<!DOCTYPE html>\n<html>\n<head>\n<meta charset="utf-8" />\n<title>\xe6\xac\xa2\xe8\xbf\x8e\xe5\x85\x89\xe4\xb8\xb4\xe5\xb0\x8f\xe7\x8e\x8b\xe7\x9a\x84\xe7\xa9\xba\xe9\x97\xb4</title>\n</head>\n<body>\n<ul>\n')
+ 4      for person in personList:
+ 5          _buffer.append('\n')
+ 6          _buffer.append('\n<li>')
+ 7          _tmp = person.id,person.personName,person.personPhoto,person.personComment
+ 8          if isinstance(_tmp, _string_types): _tmp = _utf8(_tmp)
+ 9          else: _tmp = _utf8(str(_tmp))
+10          _tmp = _utf8(xhtml_escape(_tmp))
+11          _buffer.append(_tmp)
+12          _buffer.append('\n')
+13          _buffer.append('\n')
+14      _buffer.append('\n</ul>\n</body>\n</html>')
+15      return _utf8('').join(_buffer)]
+[2013-09-03 22:51]:[root]:[INFO]:[/usr/local/lib/python2.7/dist-packages/tornado-2.0-py2.7.egg/tornado/web.py]:[line-number:1313]:[304 GET / (127.0.0.1) 28.13ms]
+[2013-09-03 22:55]:[root]:[ERROR]:[/usr/local/lib/python2.7/dist-packages/tornado-2.0-py2.7.egg/tornado/template.py]:[line-number:150]:[index.html code:
+ 1  def _execute():
+ 2      _buffer = []
+ 3      _buffer.append('<!DOCTYPE html>\n<html>\n<head>\n<meta charset="utf-8" />\n<title>\xe6\xac\xa2\xe8\xbf\x8e\xe5\x85\x89\xe4\xb8\xb4\xe5\xb0\x8f\xe7\x8e\x8b\xe7\x9a\x84\xe7\xa9\xba\xe9\x97\xb4</title>\n</head>\n<body>\n<ul>\n')
+ 4      for person in personList:
+ 5          _buffer.append('\n')
+ 6          _buffer.append('\n<li>')
+ 7          _tmp = person.id,person.personName,person.personPhoto,person.personComment
+ 8          if isinstance(_tmp, _string_types): _tmp = _utf8(_tmp)
+ 9          else: _tmp = _utf8(str(_tmp))
+10          _tmp = _utf8(xhtml_escape(_tmp))
+11          _buffer.append(_tmp)
+12          _buffer.append('\n')
+13          _buffer.append('\n')
+14      _buffer.append('\n</ul>\n</body>\n</html>')
+15      return _utf8('').join(_buffer)]
+[2013-09-03 22:55]:[root]:[INFO]:[/usr/local/lib/python2.7/dist-packages/tornado-2.0-py2.7.egg/tornado/web.py]:[line-number:1313]:[304 GET / (127.0.0.1) 52.90ms]
+[2013-09-03 22:55]:[root]:[ERROR]:[/usr/local/lib/python2.7/dist-packages/tornado-2.0-py2.7.egg/tornado/template.py]:[line-number:150]:[index.html code:
+ 1  def _execute():
+ 2      _buffer = []
+ 3      _buffer.append('<!DOCTYPE html>\n<html>\n<head>\n<meta charset="utf-8" />\n<title>\xe6\xac\xa2\xe8\xbf\x8e\xe5\x85\x89\xe4\xb8\xb4\xe5\xb0\x8f\xe7\x8e\x8b\xe7\x9a\x84\xe7\xa9\xba\xe9\x97\xb4</title>\n</head>\n<body>\n<ul>\n')
+ 4      for person in personList:
+ 5          _buffer.append('\n')
+ 6          _buffer.append('\n<li>')
+ 7          _tmp = person.id,person.personName,person.personPhoto,person.personComment
+ 8          if isinstance(_tmp, _string_types): _tmp = _utf8(_tmp)
+ 9          else: _tmp = _utf8(str(_tmp))
+10          _tmp = _utf8(xhtml_escape(_tmp))
+11          _buffer.append(_tmp)
+12          _buffer.append('\n')
+13          _buffer.append('\n')
+14      _buffer.append('\n</ul>\n</body>\n</html>')
+15      return _utf8('').join(_buffer)]
+[2013-09-03 22:55]:[root]:[INFO]:[/usr/local/lib/python2.7/dist-packages/tornado-2.0-py2.7.egg/tornado/web.py]:[line-number:1313]:[304 GET / (127.0.0.1) 4.07ms]
+[2013-09-03 22:56]:[root]:[INFO]:[/usr/local/lib/python2.7/dist-packages/tornado-2.0-py2.7.egg/tornado/web.py]:[line-number:1313]:[200 GET / (127.0.0.1) 21.23ms]
+[2013-09-03 22:58]:[root]:[INFO]:[/usr/local/lib/python2.7/dist-packages/tornado-2.0-py2.7.egg/tornado/web.py]:[line-number:1313]:[200 GET / (127.0.0.1) 5.25ms]
+[2013-09-03 22:58]:[root]:[INFO]:[/usr/local/lib/python2.7/dist-packages/tornado-2.0-py2.7.egg/tornado/web.py]:[line-number:1313]:[304 GET / (127.0.0.1) 13.76ms]
+[2013-09-03 22:58]:[root]:[INFO]:[/usr/local/lib/python2.7/dist-packages/tornado-2.0-py2.7.egg/tornado/web.py]:[line-number:1313]:[304 GET / (127.0.0.1) 2.65ms]
+[2013-09-03 22:59]:[root]:[INFO]:[/usr/local/lib/python2.7/dist-packages/tornado-2.0-py2.7.egg/tornado/web.py]:[line-number:1313]:[304 GET / (127.0.0.1) 2.48ms]
+[2013-09-03 22:59]:[root]:[INFO]:[/usr/local/lib/python2.7/dist-packages/tornado-2.0-py2.7.egg/tornado/web.py]:[line-number:1313]:[304 GET / (127.0.0.1) 2.14ms]
+[2013-09-03 22:59]:[root]:[INFO]:[/usr/local/lib/python2.7/dist-packages/tornado-2.0-py2.7.egg/tornado/web.py]:[line-number:1313]:[304 GET / (127.0.0.1) 1.55ms]
+[2013-09-03 23:01]:[root]:[ERROR]:[/usr/local/lib/python2.7/dist-packages/tornado-2.0-py2.7.egg/tornado/template.py]:[line-number:150]:[index.html code:
+ 1  def _execute():
+ 2      _buffer = []
+ 3      _buffer.append('<!DOCTYPE html>\n<html>\n<head>\n<meta charset="utf-8" />\n<title>\xe6\xac\xa2\xe8\xbf\x8e\xe5\x85\x89\xe4\xb8\xb4\xe5\xb0\x8f\xe7\x8e\x8b\xe7\x9a\x84\xe7\xa9\xba\xe9\x97\xb4</title>\n</head>\n<body>\n<ul>\n')
+ 4      for person in personList:
+ 5          _buffer.append('\n')
+ 6          _buffer.append('\n<li>')
+ 7          _tmp = person.id,person.personName,person.personPhoto,person.personComment
+ 8          if isinstance(_tmp, _string_types): _tmp = _utf8(_tmp)
+ 9          else: _tmp = _utf8(str(_tmp))
+10          _tmp = _utf8(xhtml_escape(_tmp))
+11          _buffer.append(_tmp)
+12          _buffer.append('\n')
+13          _buffer.append('\n')
+14      _buffer.append('\n</ul>\n</body>\n</html>')
+15      return _utf8('').join(_buffer)]
+[2013-09-03 23:01]:[root]:[INFO]:[/usr/local/lib/python2.7/dist-packages/tornado-2.0-py2.7.egg/tornado/web.py]:[line-number:1313]:[200 GET / (127.0.0.1) 27.09ms]
+[2013-09-03 23:01]:[root]:[ERROR]:[/usr/local/lib/python2.7/dist-packages/tornado-2.0-py2.7.egg/tornado/template.py]:[line-number:150]:[index.html code:
+ 1  def _execute():
+ 2      _buffer = []
+ 3      _buffer.append('<!DOCTYPE html>\n<html>\n<head>\n<meta charset="utf-8" />\n<title>\xe6\xac\xa2\xe8\xbf\x8e\xe5\x85\x89\xe4\xb8\xb4\xe5\xb0\x8f\xe7\x8e\x8b\xe7\x9a\x84\xe7\xa9\xba\xe9\x97\xb4</title>\n</head>\n<body>\n<ul>\n')
+ 4      for person in personList:
+ 5          _buffer.append('\n')
+ 6          _buffer.append('\n<li>')
+ 7          _tmp = person.id,person.personName,person.personPhoto,person.personComment
+ 8          if isinstance(_tmp, _string_types): _tmp = _utf8(_tmp)
+ 9          else: _tmp = _utf8(str(_tmp))
+10          _tmp = _utf8(xhtml_escape(_tmp))
+11          _buffer.append(_tmp)
+12          _buffer.append('\n')
+13          _buffer.append('\n')
+14      _buffer.append('\n</ul>\n</body>\n</html>')
+15      return _utf8('').join(_buffer)]
+[2013-09-03 23:01]:[root]:[INFO]:[/usr/local/lib/python2.7/dist-packages/tornado-2.0-py2.7.egg/tornado/web.py]:[line-number:1313]:[304 GET / (127.0.0.1) 26441.26ms]
+[2013-09-03 23:02]:[root]:[ERROR]:[/usr/local/lib/python2.7/dist-packages/tornado-2.0-py2.7.egg/tornado/template.py]:[line-number:150]:[index.html code:
+ 1  def _execute():
+ 2      _buffer = []
+ 3      _buffer.append('<!DOCTYPE html>\n<html>\n<head>\n<meta charset="utf-8" />\n<title>\xe6\xac\xa2\xe8\xbf\x8e\xe5\x85\x89\xe4\xb8\xb4\xe5\xb0\x8f\xe7\x8e\x8b\xe7\x9a\x84\xe7\xa9\xba\xe9\x97\xb4</title>\n</head>\n<body>\n<ul>\n')
+ 4      for person in personList:
+ 5          _buffer.append('\n')
+ 6          _buffer.append('\n<li>')
+ 7          _tmp = person.id,person.personName,person.personPhoto,person.personComment
+ 8          if isinstance(_tmp, _string_types): _tmp = _utf8(_tmp)
+ 9          else: _tmp = _utf8(str(_tmp))
+10          _tmp = _utf8(xhtml_escape(_tmp))
+11          _buffer.append(_tmp)
+12          _buffer.append('\n')
+13          _buffer.append('\n')
+14      _buffer.append('\n</ul>\n</body>\n</html>')
+15      return _utf8('').join(_buffer)]
+[2013-09-03 23:02]:[root]:[INFO]:[/usr/local/lib/python2.7/dist-packages/tornado-2.0-py2.7.egg/tornado/web.py]:[line-number:1313]:[304 GET / (127.0.0.1) 25.59ms]
+[2013-09-03 23:02]:[root]:[ERROR]:[/usr/local/lib/python2.7/dist-packages/tornado-2.0-py2.7.egg/tornado/template.py]:[line-number:150]:[index.html code:
+ 1  def _execute():
+ 2      _buffer = []
+ 3      _buffer.append('<!DOCTYPE html>\n<html>\n<head>\n<meta charset="utf-8" />\n<title>\xe6\xac\xa2\xe8\xbf\x8e\xe5\x85\x89\xe4\xb8\xb4\xe5\xb0\x8f\xe7\x8e\x8b\xe7\x9a\x84\xe7\xa9\xba\xe9\x97\xb4</title>\n</head>\n<body>\n<ul>\n')
+ 4      for person in personList:
+ 5          _buffer.append('\n')
+ 6          _buffer.append('\n<li>')
+ 7          _tmp = person.id,person.personName,person.personPhoto,person.personComment
+ 8          if isinstance(_tmp, _string_types): _tmp = _utf8(_tmp)
+ 9          else: _tmp = _utf8(str(_tmp))
+10          _tmp = _utf8(xhtml_escape(_tmp))
+11          _buffer.append(_tmp)
+12          _buffer.append('\n')
+13          _buffer.append('\n')
+14      _buffer.append('\n</ul>\n</body>\n</html>')
+15      return _utf8('').join(_buffer)]
+[2013-09-03 23:02]:[root]:[INFO]:[/usr/local/lib/python2.7/dist-packages/tornado-2.0-py2.7.egg/tornado/web.py]:[line-number:1313]:[304 GET / (127.0.0.1) 4.44ms]
+[2013-09-03 23:02]:[root]:[ERROR]:[/usr/local/lib/python2.7/dist-packages/tornado-2.0-py2.7.egg/tornado/template.py]:[line-number:150]:[index.html code:
+ 1  def _execute():
+ 2      _buffer = []
+ 3      _buffer.append('<!DOCTYPE html>\n<html>\n<head>\n<meta charset="utf-8" />\n<title>\xe6\xac\xa2\xe8\xbf\x8e\xe5\x85\x89\xe4\xb8\xb4\xe5\xb0\x8f\xe7\x8e\x8b\xe7\x9a\x84\xe7\xa9\xba\xe9\x97\xb4</title>\n</head>\n<body>\n<ul>\n')
+ 4      for person in personList:
+ 5          _buffer.append('\n')
+ 6          _buffer.append('\n<li>')
+ 7          _tmp = person.id,person.personName,person.personPhoto,person.personComment
+ 8          if isinstance(_tmp, _string_types): _tmp = _utf8(_tmp)
+ 9          else: _tmp = _utf8(str(_tmp))
+10          _tmp = _utf8(xhtml_escape(_tmp))
+11          _buffer.append(_tmp)
+12          _buffer.append('\n')
+13          _buffer.append('\n')
+14      _buffer.append('\n</ul>\n</body>\n</html>')
+15      return _utf8('').join(_buffer)]
+[2013-09-03 23:02]:[root]:[INFO]:[/usr/local/lib/python2.7/dist-packages/tornado-2.0-py2.7.egg/tornado/web.py]:[line-number:1313]:[304 GET / (127.0.0.1) 1.91ms]
+[2013-09-03 23:02]:[root]:[INFO]:[/usr/local/lib/python2.7/dist-packages/tornado-2.0-py2.7.egg/tornado/web.py]:[line-number:1313]:[200 GET / (127.0.0.1) 16.67ms]
+[2013-09-03 23:25]:[root]:[INFO]:[/usr/local/lib/python2.7/dist-packages/tornado-2.0-py2.7.egg/tornado/web.py]:[line-number:1313]:[304 GET / (127.0.0.1) 13.45ms]
+[2013-09-03 23:25]:[root]:[INFO]:[/usr/local/lib/python2.7/dist-packages/tornado-2.0-py2.7.egg/tornado/web.py]:[line-number:1313]:[200 GET / (127.0.0.1) 12.59ms]
+[2013-09-03 23:25]:[root]:[INFO]:[/usr/local/lib/python2.7/dist-packages/tornado-2.0-py2.7.egg/tornado/web.py]:[line-number:1313]:[304 GET / (127.0.0.1) 1.81ms]
+[2013-09-03 23:25]:[root]:[INFO]:[/usr/local/lib/python2.7/dist-packages/tornado-2.0-py2.7.egg/tornado/web.py]:[line-number:1313]:[304 GET / (127.0.0.1) 1.17ms]
+[2013-09-03 23:25]:[root]:[INFO]:[/usr/local/lib/python2.7/dist-packages/tornado-2.0-py2.7.egg/tornado/web.py]:[line-number:1313]:[304 GET / (127.0.0.1) 1.07ms]
+[2013-09-03 23:25]:[root]:[INFO]:[/usr/local/lib/python2.7/dist-packages/tornado-2.0-py2.7.egg/tornado/web.py]:[line-number:1313]:[304 GET / (127.0.0.1) 2.16ms]
+[2013-09-03 23:29]:[root]:[INFO]:[/usr/local/lib/python2.7/dist-packages/tornado-2.0-py2.7.egg/tornado/web.py]:[line-number:1313]:[304 GET / (127.0.0.1) 1.18ms]
+[2013-09-03 23:29]:[root]:[INFO]:[/usr/local/lib/python2.7/dist-packages/tornado-2.0-py2.7.egg/tornado/web.py]:[line-number:1313]:[304 GET / (127.0.0.1) 1.16ms]
+[2013-09-03 23:29]:[root]:[INFO]:[/usr/local/lib/python2.7/dist-packages/tornado-2.0-py2.7.egg/tornado/web.py]:[line-number:1313]:[304 GET / (127.0.0.1) 1.39ms]
+[2013-09-03 23:31]:[root]:[ERROR]:[/usr/local/lib/python2.7/dist-packages/tornado-2.0-py2.7.egg/tornado/template.py]:[line-number:150]:[index.html code:
+ 1  def _execute():
+ 2      _buffer = []
+ 3      _buffer.append('<!DOCTYPE html>\n<html>\n<head>\n<meta charset="utf-8" />\n<title>\xe6\xac\xa2\xe8\xbf\x8e\xe5\x85\x89\xe4\xb8\xb4\xe5\xb0\x8f\xe7\x8e\x8b\xe7\x9a\x84\xe7\xa9\xba\xe9\x97\xb4</title>\n</head>\n<body>\n<ul>\n')
+ 4      for person in personList:
+ 5          _buffer.append('\n')
+ 6          _buffer.append('\n<li>')
+ 7          _tmp = person.id
+ 8          if isinstance(_tmp, _string_types): _tmp = _utf8(_tmp)
+ 9          else: _tmp = _utf8(str(_tmp))
+10          _tmp = _utf8(xhtml_escape(_tmp))
+11          _buffer.append(_tmp)
+12          _buffer.append('</li>\n<li>')
+13          _tmp = person.personName
+14          if isinstance(_tmp, _string_types): _tmp = _utf8(_tmp)
+15          else: _tmp = _utf8(str(_tmp))
+16          _tmp = _utf8(xhtml_escape(_tmp))
+17          _buffer.append(_tmp)
+18          _buffer.append('</li>\n<li><img src="')
+19          _tmp = person.personPhoto
+20          if isinstance(_tmp, _string_types): _tmp = _utf8(_tmp)
+21          else: _tmp = _utf8(str(_tmp))
+22          _tmp = _utf8(xhtml_escape(_tmp))
+23          _buffer.append(_tmp)
+24          _buffer.append('" /></li>\n<li>')
+25          _tmp = personComment
+26          if isinstance(_tmp, _string_types): _tmp = _utf8(_tmp)
+27          else: _tmp = _utf8(str(_tmp))
+28          _tmp = _utf8(xhtml_escape(_tmp))
+29          _buffer.append(_tmp)
+30          _buffer.append('</li>\n')
+31          _buffer.append('\n')
+32      _buffer.append('\n</ul>\n</body>\n</html>')
+33      return _utf8('').join(_buffer)]
+[2013-09-03 23:31]:[root]:[INFO]:[/usr/local/lib/python2.7/dist-packages/tornado-2.0-py2.7.egg/tornado/web.py]:[line-number:1313]:[200 GET / (127.0.0.1) 2.52ms]
+[2013-09-03 23:31]:[root]:[INFO]:[/usr/local/lib/python2.7/dist-packages/tornado-2.0-py2.7.egg/tornado/web.py]:[line-number:1313]:[200 GET / (127.0.0.1) 4.85ms]
+[2013-09-03 23:31]:[root]:[WARNING]:[/usr/local/lib/python2.7/dist-packages/tornado-2.0-py2.7.egg/tornado/web.py]:[line-number:1313]:[404 GET /home/xiaowang/PycharmProjects/psSite/static/phtot/IMG_2058.JPG (127.0.0.1) 0.37ms]
+[2013-09-03 23:31]:[root]:[WARNING]:[/usr/local/lib/python2.7/dist-packages/tornado-2.0-py2.7.egg/tornado/web.py]:[line-number:1313]:[404 GET /home/xiaowang/PycharmProjects/psSite/static/phtot/IMG_2199.JPG (127.0.0.1) 0.15ms]

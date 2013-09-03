@@ -33,7 +33,7 @@ def query(pool, sql, params={}):
 
         return res
     except Exception,e:
-        print e.message
+        print e
     finally:
         try:
             cursor.close()
